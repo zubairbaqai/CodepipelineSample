@@ -1,4 +1,5 @@
 from flask import Flask
+import time
 
 application = Flask(__name__)
 
@@ -8,6 +9,7 @@ def index():
 
 @application.route("/hello")
 def hello():
+    time.sleep(60)
     return "Hello World!"
 
 
